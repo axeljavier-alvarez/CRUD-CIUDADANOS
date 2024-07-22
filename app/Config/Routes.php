@@ -8,7 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 // home welcome
 $routes->get('/', 'Home::index');
 // regiones
-$routes->get('ver_regiones', 'Regiones::index');
+$routes->get('ver_regiones', 'RegionesController::index');
 // municipios
 $routes->get('ver_municipios', 'Municipios::index');
 // niveles academicos
@@ -17,4 +17,19 @@ $routes->get('ver_niveles_academicos', 'NivelesAcademicos::index');
 $routes->get('ver_departamentos', 'Departamentos::index');
 // ciudadanos
 $routes->get('ver_ciudadanos', 'Ciudadanos::index');
+
+
+/* ------------- AGREGAR  --------------- */
+// 1. regiones
+$routes->get('nueva_region', 'RegionesController::nuevaRegion');
+$routes->post('agregar_region', 'RegionesController::agregarRegion');
+
+
+
+/* ------------ ELIMINAR ------------ */
+// 1. regiones
+$routes->get('eliminar_region/(:num)','RegionesController::eliminarRegion/$1');
+
+
+
 
