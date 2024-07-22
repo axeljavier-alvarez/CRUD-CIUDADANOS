@@ -1,57 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Municipios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo base_url('css/style.css'); ?>">
+    <link rel="stylesheet" href="<?php echo base_url('css/menu.css'); ?>">
 
 </head>
+
+<style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+
 <body>
-    
-<div class="container">
-    <center>
-    <h1>Municipios</h1>
-    </center>
-<table class="table table-border table-striped">
-    <thead class="table-primary">
-        <tr>
-            <th>Código Municipio</th>
-            <th>Nombre Municipio</th>
-            <th>Código Departamento</th>
-        </tr>
-    </thead>
-    <tbody>
-    <?php 
-        foreach($datos as $municipio): 
-    ?>
-        <tr>
-            <td> 
-                <?php 
-                echo $municipio['cod_muni'];
+
+<br>
+<nav>
+        <div class="logo">
+
+            <img src="img/ciudadanos.png" id="imgCiudadanos" />
+            <a href="http://localhost/fs2024/ci4_ciudadanos/public/">
+                <h1>CIUDADANOS</h1>
+
+            </a>
+        </div>
+        <ul>
+            <li>
+                <a href="ver_ciudadanos">Ciudadanos</a>
+            </li>
+            <li>
+                <a href="ver_departamentos">Departamentos</a>
+            </li>
+            <li>
+                <a href="ver_municipios">Municipios</a>
+            </li>
+            <li>
+                <a href="ver_niveles_academicos">Niveles</a>
+            </li>
+            <li>
+                <a href="ver_regiones">Regiones</a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </nav>
+    <div class="menubar">
+        <ul>
+            <li>
+                <a href="#">Ciudadanos</a>
+            </li>
+            <li>
+                <a href="#">Departamentos</a>
+            </li>
+            <li>
+                <a href="#">Municipios</a>
+            </li>
+            <li>
+                <a href="#">Niveles</a>
+            </li>
+            <li>
+                <a href="">Regiones</a>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+            <h1>Municipios</h1>
+            <br>
+    <!-- Cambiarlo xd --> 
+            <a href="" class="btn btn-outline-success">Nuevo municipio</a>
+
+            <br>
+            <br>
+
+        <table class="table table-border table-striped">
+            <thead class="table-primary">
+                <tr>
+                    <td>Código Municipio</td>
+                    <td>Nombre Municipio</td>
+                    <td>Código Departamento</td>
+                    <td id="nuevo"><strong>ACCIONES</strong></td>
+
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                foreach ($datos as $municipio) :
                 ?>
-            </td>
-            <td>
-               <?php 
-                echo $municipio['nombre_municipio'];
+                    <tr>
+                        <td>
+                            <?php
+                            echo $municipio['cod_muni'];
+                            ?>
+                        </td>
+                        <td>
+                            <?php
+                            echo $municipio['nombre_municipio'];
+                            ?>
+                        </td>
+                        <td>
+                            <?php
+                            echo $municipio['cod_depto'];
+                            ?>
+                        </td>
+                        <td>
+                            <a href="" class="btn btn-outline-primary">
+                                Actualizar
+                            </a>
+                            <a href="" class="btn btn-outline-danger">
+                                Eliminar
+                            </a>
+                        </td>
+                    </tr>
+                <?php
+                endforeach;
                 ?>
-            </td>
-            <td>
-                <?php 
-                echo $municipio['cod_depto'];
-                ?> 
-            </td>
-            <td></td>
-        </tr>
-        <?php 
-        endforeach;
-    ?>
-    </tbody>
-    
-   
-</table>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+            </tbody>
+
+
+        </table>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <footer>
+        <br>
+        Instituto Técnico de Capacitación y Productividad - INTECAP.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+
 
 </body>
+
 </html>
