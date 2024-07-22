@@ -8,6 +8,11 @@
 body{
     background-color: #080710;
 }
+
+a {
+    text-decoration: none;
+}
+
 .background{
     width: 430px;
     height: 520px;

@@ -42,8 +42,9 @@ class RegionesController extends BaseController
         echo $id;
         $regiones = new RegionesModel();
         $regiones->delete(['cod_region'=>$id]);
+        return redirect()->to('ver_regiones');
 
-        return redirect()->route('ver_regiones');
+        // return redirect()->route('ver_regiones');
 
     }
 
