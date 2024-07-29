@@ -15,4 +15,6 @@ class NivelesAcademicos extends BaseController
 
         return view('niveles_academicos', $datos);
     }
+
+
 }
