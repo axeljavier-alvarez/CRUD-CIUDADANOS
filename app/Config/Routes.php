@@ -36,3 +36,8 @@ $routes->get('ver_municipios', 'MunicipiosController::index');
 $routes->post('agregar_municipio', 'MunicipiosController::agregarMunicipio');
 // Eliminar
 $routes->get('eliminar_municipio/(:num)','MunicipiosController::eliminarMunicipio/$1');
+
+
+$routes->get('buscar_municipio/(:num)', 'MunicipiosController::buscarMunicipio/$1');
+
+$routes->post('modificar_municipio', 'MunicipiosController::modificarMunicipio');

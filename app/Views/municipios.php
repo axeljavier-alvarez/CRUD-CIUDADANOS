@@ -167,7 +167,7 @@
     <div class="container">
         <h1>Municipios</h1>
         <br>
-        <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#modalAgregarMunicipio">
+        <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#modalAgregarMunicipio">
             Agregar
         </button>
         <br>
@@ -179,7 +179,6 @@
                     <td>Nombre Municipio</td>
                     <td>Código Departamento</td>
                     <td id="nuevo"><strong>ACCIONES</strong></td>
-
                 </tr>
             </thead>
             <tbody>
