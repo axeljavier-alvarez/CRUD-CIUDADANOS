@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +8,14 @@
 
     <link rel="stylesheet" href="<?php echo base_url('css/style.css'); ?>">
     <link rel="stylesheet" href="<?php echo base_url('css/menu.css'); ?>">
-
-
 </head>
-
 <body>
     <br>
     <nav>
         <div class="logo">
-
             <img src="img/ciudadanos.png" id="imgCiudadanos" />
             <a href="http://localhost/fs2024/ci4_ciudadanos/public/">
                 <h1>CIUDADANOS</h1>
-
             </a>
         </div>
         <ul>

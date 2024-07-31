@@ -15,8 +15,8 @@
 
 <style>
     a {
-    text-decoration: none;
-}
+        text-decoration: none;
+    }
 </style>
 
 <body>
@@ -57,19 +57,19 @@
     <div class="menubar">
         <ul>
             <li>
-                <a href="#">Ciudadanos</a>
+                <a href="ver_ciudadanos">Ciudadanos</a>
             </li>
             <li>
-                <a href="#">Departamentos</a>
+                <a href="ver_departamentos">Departamentos</a>
             </li>
             <li>
-                <a href="#">Municipios</a>
+                <a href="ver_municipios">Municipios</a>
             </li>
             <li>
-                <a href="#">Niveles</a>
+                <a href="ver_niveles_academicos">Niveles</a>
             </li>
             <li>
-                <a href="">Regiones</a>
+                <a href="ver_regiones">Regiones</a>
             </li>
         </ul>
     </div>
@@ -114,8 +114,8 @@
                             ?>
                         </td>
                         <td>
-                            <a href="" class="btn btn-outline-primary">
-                                Actualizar
+                            <a href="<?= base_url('buscar_region/') . $region['cod_region']; ?>" class="btn btn-outline-primary">
+                                Editar
                             </a>
                             <a href="eliminar_region/<?php echo $region['cod_region']; ?>" class="btn btn-outline-danger">
                                 Eliminar
