@@ -37,9 +37,9 @@
         border-radius: 50%;
     }
 
-  
+  /* 
     form {
-        height: 520px;
+        height: 1500px;
         width: 400px;
         background-color: rgba(255, 255, 255, 0.13);
         position: absolute;
@@ -52,7 +52,21 @@
         box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
         padding: 50px 35px;
     }
+*/
 
+form {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.13);
+    position: absolute;
+    border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        padding: 50px 35px;
+
+        top: 20%;
+        left: 40%;
+}
     form * {
         font-family: 'Poppins', sans-serif;
         color: #ffffff;
@@ -61,12 +75,7 @@
         border: none;
     }
 
-    form h3 {
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 42px;
-        text-align: center;
-    }
+    
 
     label {
         display: block;
@@ -103,7 +112,7 @@
         cursor: pointer;
     }
 
-    .btnGuardarRegion {
+    .btnGuardarDepartamento {
         width: 100%;
         background-color: #ffffff;
         color: #080710;
@@ -158,16 +167,37 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form class="login-container" action="<?= base_url('modificar_municipio') ?>" method="post">
-        <h3>Editar Municipio</h3>
-        <label for="txtId" class="form-label">Código Región:</label>
-        <input type="number" id="txtId" name="txtId" class="form-control" autocomplete="off" value="<?= $datos['cod_muni']; ?>" readonly>
-        <label for="txtNombre" class="form-label">Nombre</label>
-        <input type="text" id="txtNombre" name="txtNombre" class="form-control" autocomplete="off" value="<?= $datos['nombre_municipio']; ?>">
-        <label for="txtDescripcion" class="form-label">Descripción</label>
-        <input type="text" id="txtDescripcion" name="txtDescripcion" class="form-control" autocomplete="off" value="<?= $datos['cod_depto']; ?>">
-        <input type="submit" class="btn btn-success form-control btnGuardarRegion" name="btnGuardarRegion" value="Actualizar">
+    <center>
+    <form class="login-container" action="<?= base_url('modificar_ciudadano') ?>" method="post">
+        <h3>Editar Ciudadanos</h3>
+        <label for="txtId" class="form-label">DPI:</label>
+        <input type="number" id="txtId" name="txtId" class="form-control" autocomplete="off" value="<?= $datos['dpi']; ?>" readonly>
+        <label for="txtApellido" class="form-label">Apellido:</label>
+        <input type="text" id="txtApellido" name="txtApellido" class="form-control" autocomplete="off" value="<?= $datos['apellido']; ?>">
+        <label for="txtNombre" class="form-label">Nombre:</label>
+        <input type="text" id="txtNombre" name="txtNombre" class="form-control" autocomplete="off" value="<?= $datos['nombre']; ?>">
+        <label for="txtDireccion" class="form-label">Dirección:</label>
+        <input type="text" id="txtDireccion" name="txtDireccion" class="form-control" autocomplete="off" value="<?= $datos['direccion']; ?>">
+        <label for="txtTelCasa" class="form-label">Télefono casa:</label>
+        <input type="number" id="txtTelCasa" name="txtTelCasa" class="form-control" autocomplete="off" value="<?= $datos['tel_casa']; ?>">
+        <label for="tel_movil" class="form-label">Télefono móvil:</label>
+        <input type="number" id="tel_movil" name="tel_movil" class="form-control" autocomplete="off" value="<?= $datos['tel_movil']; ?>">
+        <label for="txtEmail" class="form-label">Email:</label>
+        <input type="text" id="txtEmail" name="txtEmail" class="form-control" autocomplete="off" value="<?= $datos['email']; ?>">
+        <label for="txtFecha" class="form-label">Fecha nacimiento:</label>
+        <input type="date" id="txtFecha" name="txtFecha" class="form-control" autocomplete="off" value="<?= $datos['fechanac']; ?>">
+        <label for="txtCodAcad" class="form-label">Código nivel académico:</label>
+        <input type="number" id="txtCodAcad" name="txtCodAcad" class="form-control" autocomplete="off" value="<?= $datos['cod_nivel_acad']; ?>">
+        <label for="txtCodMuni" class="form-label">Código municipio:</label>
+        <input type="number" id="txtCodMuni" name="txtCodMuni" class="form-control" autocomplete="off" value="<?= $datos['cod_muni']; ?>">
+        <label for="txtPassword" class="form-label">Password:</label>
+        <input type="password" id="txtPassword" name="txtPassword" class="form-control" autocomplete="off" value="<?= $datos['contra']; ?>">
+
+
+        <input type="submit" class="btn btn-success form-control btnGuardarDepartamento" name="btnGuardarDepartamento" value="Actualizar">
     </form>
+    </center>
+   
 </body>
 
 </html>

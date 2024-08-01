@@ -39,7 +39,7 @@
 
   
     form {
-        height: 520px;
+        height: 580px;
         width: 400px;
         background-color: rgba(255, 255, 255, 0.13);
         position: absolute;
@@ -103,7 +103,7 @@
         cursor: pointer;
     }
 
-    .btnGuardarRegion {
+    .btnGuardarDepartamento {
         width: 100%;
         background-color: #ffffff;
         color: #080710;
@@ -158,15 +158,15 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form class="login-container" action="<?= base_url('modificar_municipio') ?>" method="post">
-        <h3>Editar Municipio</h3>
-        <label for="txtId" class="form-label">Código Región:</label>
-        <input type="number" id="txtId" name="txtId" class="form-control" autocomplete="off" value="<?= $datos['cod_muni']; ?>" readonly>
-        <label for="txtNombre" class="form-label">Nombre</label>
-        <input type="text" id="txtNombre" name="txtNombre" class="form-control" autocomplete="off" value="<?= $datos['nombre_municipio']; ?>">
-        <label for="txtDescripcion" class="form-label">Descripción</label>
-        <input type="text" id="txtDescripcion" name="txtDescripcion" class="form-control" autocomplete="off" value="<?= $datos['cod_depto']; ?>">
-        <input type="submit" class="btn btn-success form-control btnGuardarRegion" name="btnGuardarRegion" value="Actualizar">
+    <form class="login-container" action="<?= base_url('modificar_departamento') ?>" method="post">
+        <h3>Editar Departamentos</h3>
+        <label for="txtId" class="form-label">Código Departamento:</label>
+        <input type="number" id="txtId" name="txtId" class="form-control" autocomplete="off" value="<?= $datos['cod_depto']; ?>" readonly>
+        <label for="txtNombre" class="form-label">Nombre Departamento</label>
+        <input type="text" id="txtNombre" name="txtNombre" class="form-control" autocomplete="off" value="<?= $datos['nombre_depto']; ?>">
+        <label for="txtCodRegion" class="form-label">Código Región</label>
+        <input type="text" id="txtCodRegion" name="txtCodRegion" class="form-control" autocomplete="off" value="<?= $datos['cod_region']; ?>">
+        <input type="submit" class="btn btn-success form-control btnGuardarDepartamento" name="btnGuardarDepartamento" value="Actualizar">
     </form>
 </body>
 

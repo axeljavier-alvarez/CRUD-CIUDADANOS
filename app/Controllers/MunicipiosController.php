@@ -53,7 +53,7 @@ class MunicipiosController extends BaseController
         ];
 
         $municipios = new MunicipiosModel();
-        $municipios->update($datos['cod_region'], $datos);
+        $municipios->update($datos['cod_muni'], $datos);
         return redirect()->route('ver_regiones');
     }
 }

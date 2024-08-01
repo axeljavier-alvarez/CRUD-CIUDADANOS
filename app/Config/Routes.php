@@ -10,10 +10,7 @@ $routes->get('/', 'Home::index');
 
 // niveles academicos
 $routes->get('ver_niveles_academicos', 'NivelesAcademicos::index');
-// departamentos
-$routes->get('ver_departamentos', 'Departamentos::index');
-// ciudadanos
-$routes->get('ver_ciudadanos', 'Ciudadanos::index');
+
 
 
 /* ------------- REGIONES  --------------- */
@@ -41,3 +38,27 @@ $routes->get('eliminar_municipio/(:num)','MunicipiosController::eliminarMunicipi
 $routes->get('buscar_municipio/(:num)', 'MunicipiosController::buscarMunicipio/$1');
 
 $routes->post('modificar_municipio', 'MunicipiosController::modificarMunicipio');
+
+/* ------------ DEPARTAMENTOS ------------- */
+// leer
+$routes->get('ver_departamentos', 'DepartamentosController::index');
+// Agregar
+$routes->post('agregar_departamento', 'DepartamentosController::agregarDepartamento');
+// Eliminar
+$routes->get('eliminar_departamento/(:num)','DepartamentosController::eliminarDepartamento/$1');
+
+$routes->get('buscar_departamento/(:num)', 'DepartamentosController::buscarDepartamento/$1');
+
+$routes->post('modificar_departamento', 'DepartamentosController::modificarDepartamento');
+
+/* ------------ CIUDADANOS ---------------- */
+// leer 
+$routes->get('ver_ciudadanos', 'CiudadanosController::index');
+// Agregar
+$routes->post('agregar_ciudadano', 'CiudadanosController::agregarCiudadano');
+// Eliminar
+$routes->get('eliminar_ciudadano/(:num)','CiudadanosController::eliminarCiudadano/$1');
+
+$routes->get('buscar_ciudadano/(:num)', 'CiudadanosController::buscarCiudadano/$1');
+
+$routes->post('modificar_ciudadano', 'CiudadanosController::modificarCiudadano');
